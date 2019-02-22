@@ -3,7 +3,6 @@
 """"""""""""""""""""""""""""""""""""""""
 
 
-
 """"""""""""""""""""""""""""""""""""""""
 " Setting up Vim Plug
 """"""""""""""""""""""""""""""""""""""""
@@ -30,7 +29,7 @@ Plug 'neomake/neomake' " Linter
 Plug 'tomtom/tcomment_vim' " Commenter
 Plug 'terryma/vim-multiple-cursors' " Multiple Cursor Selection
 Plug 'morhetz/gruvbox' " Gruvbox
-
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " NERDTree Syntax Highlighting
 " Initialize plugin system
 call plug#end()
 
@@ -39,6 +38,7 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""
 " Package Configuration
 """"""""""""""""""""""""""""""""""""""""
+
 " deoplete Configuration
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#jedi#show_docstring = 1
@@ -58,8 +58,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let b:ale_linters = ['pyflakes', 'flake8', 'pylint']
 let g:ale_sign_error = 'X'
 
-" Spacemacs Theme Configuration
-
 " Lightline Configuration
 let g:lightline = {
       \ 'colorscheme': 'powerline',
@@ -72,11 +70,17 @@ let g:lightline = {
       \ },
       \ }
 
-
 " Linter Configuration
 call neomake#configure#automake('nrwi', 500)
 let g:neomake_python_enabled_makers = ['pylint', 'flake8']
 
+" NERDTree Fonts Configuration
+let g:webdevicons_enable = 1
+let g:webdevicons_enable_nerdtree = 1
+let g:WebDevIconsUnicodeDecorateFileNodes = 1
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
+let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 
 
 """"""""""""""""""""""""""""""""""""""""
@@ -100,7 +104,6 @@ let python_highlight_all=1
 set number
 set ruler 
 set termguicolors
-
 
 
 """"""""""""""""""""""""""""""""""""""""
