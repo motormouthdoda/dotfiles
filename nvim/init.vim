@@ -3,6 +3,7 @@
 """"""""""""""""""""""""""""""""""""""""
 
 
+
 """"""""""""""""""""""""""""""""""""""""
 " Setting up Vim Plug
 """"""""""""""""""""""""""""""""""""""""
@@ -18,8 +19,6 @@ Plug 'junegunn/fzf.vim' "fzf.vim package
 Plug 'itchyny/lightline.vim' "lighline plugin
 Plug 'scrooloose/nerdtree' "NERDTree
 Plug 'w0rp/ale' "Ale for linting
-Plug 'altercation/vim-colors-solarized' "solarized colorscheme
-Plug 'liuchengxu/space-vim-dark' "spacemacs-dark theme
 Plug 'idanarye/vim-vebugger' "Debugger
 Plug 'Shougo/vimproc.vim', {'do' : 'make'} "Debugger dependency
 Plug 'jiangmiao/auto-pairs' "Auto Pairs
@@ -30,9 +29,11 @@ Plug 'airblade/vim-gitgutter' " Git Gutter
 Plug 'neomake/neomake' " Linter
 Plug 'tomtom/tcomment_vim' " Commenter
 Plug 'terryma/vim-multiple-cursors' " Multiple Cursor Selection
+Plug 'morhetz/gruvbox' " Gruvbox
 
 " Initialize plugin system
 call plug#end()
+
 
 
 """"""""""""""""""""""""""""""""""""""""
@@ -42,6 +43,13 @@ call plug#end()
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#jedi#show_docstring = 1
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+let g:jedi#goto_command = "<leader>d"
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = ""
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<leader>r"
 
 " NERDTree Configuration
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -51,12 +59,10 @@ let b:ale_linters = ['pyflakes', 'flake8', 'pylint']
 let g:ale_sign_error = 'X'
 
 " Spacemacs Theme Configuration
-let g:space_vim_dark_background = 234
-hi Comment guifg=#5C6370 ctermfg=59
 
 " Lightline Configuration
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -68,7 +74,9 @@ let g:lightline = {
 
 
 " Linter Configuration
-call neomake#configure#automake('w')
+call neomake#configure#automake('nrwi', 500)
+let g:neomake_python_enabled_makers = ['pylint', 'flake8']
+
 
 
 """"""""""""""""""""""""""""""""""""""""
@@ -79,7 +87,7 @@ set encoding=utf-8
 set splitright
 set splitbelow
 set tw=79
-colorscheme space-vim-dark
+colorscheme gruvbox
 syntax enable
 set expandtab           " enter spaces when tab is pressed
 set textwidth=120       " break lines when line length increases
@@ -91,6 +99,8 @@ filetype indent plugin on
 let python_highlight_all=1
 set number
 set ruler 
+set termguicolors
+
 
 
 """"""""""""""""""""""""""""""""""""""""
