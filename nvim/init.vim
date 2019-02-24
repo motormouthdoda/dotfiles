@@ -9,30 +9,30 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Make sure you use single quotes
-Plug 'ncm2/ncm2'  "NCM2
-Plug 'roxma/nvim-yarp' "NCM2 dependency
-Plug 'HansPinckaers/ncm2-jedi' "NCM2 support for Jedi
-Plug 'ncm2/ncm2-bufword' "NCM2 dependency
-Plug 'ncm2/ncm2-path' "NCM2 dependency
-Plug 'davidhalter/jedi-vim' "Jedi for Python
-Plug 'tweekmonster/impsort.vim' "Import Statement sorter
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } "fzf dependency
-Plug 'junegunn/fzf.vim' "fzf.vim package
-Plug 'itchyny/lightline.vim' "lighline plugin
-Plug 'scrooloose/nerdtree' "NERDTree
-Plug 'idanarye/vim-vebugger' "Debugger
-Plug 'Shougo/vimproc.vim', {'do' : 'make'} "Debugger dependency
-Plug 'jiangmiao/auto-pairs' "Auto Pairs
+Plug 'ncm2/ncm2'  " NCM2
+Plug 'roxma/nvim-yarp' " NCM2 dependency
+Plug 'HansPinckaers/ncm2-jedi' " NCM2 support for Jedi
+Plug 'ncm2/ncm2-bufword' " NCM2 dependency
+Plug 'ncm2/ncm2-path' " NCM2 dependency
+Plug 'davidhalter/jedi-vim' " Jedi for Python
+Plug 'tweekmonster/impsort.vim' " Import statement sorter
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy Files Search
+Plug 'junegunn/fzf.vim' " Fuzzy Files Search for NVIM
+Plug 'itchyny/lightline.vim' " Lighline
+Plug 'scrooloose/nerdtree' " NERDTree
+Plug 'idanarye/vim-vebugger' " Debugger
+Plug 'Shougo/vimproc.vim', {'do' : 'make'} " Debugger dependency
+Plug 'jiangmiao/auto-pairs' " Auto Pairs
 Plug 'tpope/vim-fugitive' " Git Integration with fugitive
 Plug 'Yggdroot/indentLine' " Line-Indent marks for better view
-Plug 'ryanoasis/vim-devicons' " Icons for nerdtree
+Plug 'ryanoasis/vim-devicons' " Icons for NERDtree
 Plug 'airblade/vim-gitgutter' " Git Gutter
 Plug 'neomake/neomake' " Linter
 Plug 'tomtom/tcomment_vim' " Commenter
 Plug 'terryma/vim-multiple-cursors' " Multiple Cursor Selection
-Plug 'morhetz/gruvbox' " Gruvbox
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " NERDTree Syntax Highlighting
-" Initialize plugin system
+Plug 'chriskempson/base16-vim' " Base16 ColorTheme for NVIM
+"Initialize plugin system
 call plug#end()
 
 
@@ -110,8 +110,9 @@ set encoding=utf-8
 set splitright
 set splitbelow
 set tw=79
-colorscheme gruvbox
+colorscheme base16-default-dark
 syntax enable
+set cursorline
 set expandtab           " enter spaces when tab is pressed
 set textwidth=120       " break lines when line length increases
 set tabstop=4           " use 4 spaces to represent tab
@@ -123,7 +124,6 @@ let python_highlight_all=1
 set number
 set ruler 
 set termguicolors
-
 
 """"""""""""""""""""""""""""""""""""""""
 " Personal Keybindings
