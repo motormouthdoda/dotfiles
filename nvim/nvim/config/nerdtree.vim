@@ -1,6 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree Configuration
-" Author: Shravan Bharat Doda (https://github.com/motormouthdoda)
+" Author: Shravan Doda (https://github.com/shravandoda)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 

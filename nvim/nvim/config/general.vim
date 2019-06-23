@@ -1,6 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General Configuration
-" Author: Shravan Bharat Doda (https://github.com/motormouthdoda)
+" Author: Shravan Doda (https://github.com/shravandoda)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -40,8 +40,8 @@ set noswapfile
 set mouse=a 
 set scrolloff=3
 
-" Completeopt
-set completeopt -=preview
-
 " Statusline settings
 set noshowmode
+
+" Clipboard Config
+set clipboard+=unnamedplus

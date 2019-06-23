@@ -1,6 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Theme, Airline and Sytanx Configuration
-" Author: Shravan Bharat Doda (https://github.com/motormouthdoda)
+" Author: Shravan Doda (https://github.com/shravandoda)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -12,7 +12,8 @@ set number
 " Theme Configuration
 let base16colorspace=256
 set termguicolors
-colorscheme base16-default-dark
+colorscheme ayu
+let ayucolor="dark"
 
 
 " Airline Configuration

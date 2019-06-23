@@ -1,6 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Personal Keybindings
-" Author: Shravan Bharat Doda (https://github.com/motormouthdoda)
+" Author: Shravan Bharat Doda (https://github.com/shravandoda)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Map Leader Key to ','
@@ -30,3 +30,6 @@ cnoreabbrev WQ wq
 cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
+
+" Toggle Search Highlight
+nnoremap <leader><space> :set hlsearch!<CR>

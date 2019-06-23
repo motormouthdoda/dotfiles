@@ -1,6 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins for Neovim (Installed via vim-plug)
-" Author: Shravan Bharat Doda (https://github.com/motormouthdoda)
+" Author: Shravan Doda (https://github.com/shravandoda)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -9,20 +9,22 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " List of plugins installed
 
-" LanguageClient for Neovim
+
+" Language Server Protocol Client
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
-    \ }
+    \ } 
 
-" Fuzzy Files
-Plug 'junegunn/fzf'
-
-" Deoplete completion engine
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" NCM2 for LSP
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
 
 " Echodoc
 Plug 'Shougo/echodoc.vim'
+
+" Fuzzy Files
+Plug 'junegunn/fzf'
 
 " NERDTree for navigation
 Plug 'scrooloose/nerdtree'
@@ -33,18 +35,24 @@ Plug 'ryanoasis/vim-devicons'
 " Lightline
 Plug 'itchyny/lightline.vim'
 
-
-" Syntax Highlighting for C/C++
-Plug 'justinmk/vim-syntax-extra'
-
-" Monokai Theme
-Plug 'chriskempson/base16-vim'
+" Ayu Colorscheme
+Plug 'ayu-theme/ayu-vim'
 
 " Auto Pair
 Plug 'jiangmiao/auto-pairs'
 
 " Startify
 Plug 'mhinz/vim-startify'
+
+" NerdCommenter
+Plug 'scrooloose/nerdcommenter'
+
+" GutenTags
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'skywind3000/gutentags_plus'
+
+" GDB Integration
+Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh \| UpdateRemotePlugins' }
 
 " Initialize plugin system
 call plug#end() 
