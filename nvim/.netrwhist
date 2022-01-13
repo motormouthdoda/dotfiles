@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/shravan/Practice/Data Structures/Linked List'
-let g:netrw_dirhist_2='/home/shravan/.config/nvim'
-let g:netrw_dirhist_3='/home/shravan/.config/nvim/config'
-let g:netrw_dirhist_4='/home/shravan/.config/nvim'
