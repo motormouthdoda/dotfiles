@@ -7,6 +7,6 @@ if not status_ok then
 end
 
 require(colorscheme).setup {
-    style = 'darker'
+    style = 'dark'
 }
 require(colorscheme).load()
