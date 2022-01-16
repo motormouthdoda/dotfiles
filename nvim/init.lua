@@ -1,8 +1,3 @@
-----------------------------------------------------------------------
--- Options Configuration
--- Author: Shravan Doda (https://github.com/shravandoda)
-----------------------------------------------------------------------
-
 require "shravan.options"
 require "shravan.keymaps"
 require "shravan.plugins"

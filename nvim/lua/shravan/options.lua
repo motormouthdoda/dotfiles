@@ -1,3 +1,8 @@
+----------------------------------------------------------------------
+-- Options Configuration
+-- Author: Shravan Doda (https://github.com/shravandoda)
+----------------------------------------------------------------------
+
 local options = {
   backup = false,                          -- creates a backup file
   cmdheight = 2,                           -- more space in the neovim command line for displaying messages
